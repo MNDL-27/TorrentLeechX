@@ -1,7 +1,5 @@
 deploy:
   - okteto build -t okteto.dev/api:${OKTETO_GIT_COMMIT}QbEx9u9FUfKFCKL015Xhnl7gQVUhPYszldAMdtGx33U3026s
-  - okteto build -t okteto.dev/frontend:${OKTETO_GIT_COMMIT} frontend
-  - helm upgrade --install movies chart --set tag=${OKTETO_GIT_COMMIT}
 devs:
   - api/okteto.yml
   - heroku.yml
